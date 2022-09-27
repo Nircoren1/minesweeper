@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="initGame()">
+    <div class="mainDiv">
+        <div class="aboveTableDiv">
+            <div class="upMenu">
+                <span class="time">000</span>
+                <p class="smiley" onclick="initGame()">(:</p>
+                <button class="undoBtn" onclick="onUndoClick()">undo</button>
+            </div>
+            <div class="levelDiv">
+                <button class="easy" onclick="setLevel(this)" data-level="1" data-size="4" data-mines="2"
+                    data-lives="1">easy</button>
+                <button class="medium" onclick="setLevel(this)" data-level="2" data-size="8" data-mines="14"
+                    data-lives="2">medium</button>
+                <button class="hard" onclick="setLevel(this)" data-level="3" data-size="12" data-mines="32"
+                    data-lives="3">hard</button>
+            </div>
+        </div>
+
+
+        <div class="tableMenusDiv">
+            <div class="leftMenuDiv">
+
+                <p class="livesP">Lives: <span class="lives"></span></p>
+                <p class="hintsP">Hints:</p>
+                <div class="bestScoreDiv">
+                    <p class="bestScoreTxt">Best Score: <p class="bestScores"></p></p>
+                </div>
+               
+
+
+            </div>
+            <table class="board">
+            </table>
+            <div class="rightMenuDiv">
+                <div class="topRightMenu">
+                    <div>
+                        <button class="megaHint" onclick="megaHint(this)">Mega Hint</button>
+                        <p>Mega Hint <span class="megaHitAval">available</span></p>
+                    </div>
+                    <div class="safeClickDiv">
+                        <button onclick="onSafeClick()">safe click</button>
+                        <p><span class="safeClicksLeft"></span> clicks available</p>
+                    </div>
+                </div>
+
+                <div class="bottomRightMenu">
+                    <div class="darkAndManual">
+                        <div class="sevenBoomDiv">
+                            <button class="sevenBoom" onclick="sevenBoom()">7BOOM!</button>
+                        </div>
+                        <div class="darkModeBtnDiv">
+                            <button class="darkModeBtn" onclick="darkMode()">Dark Mode</button>
+                        </div>
+                    </div>
+
+                    <div class="darkAndManual">
+                        <div class="">
+                            <button class="manualMinesBtn" onclick="manualMines()">manual placement</button>
+                            <p class="manualMinesDescription"></p>
+                        </div>
+                        <div>
+                            <button class="" onclick="onExterminatorClick()">Exterminator!</button>
+                            <p><span class="exterP"></span></p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <script src="js/utils.js"></script>
+    <script src="js/mines.js"></script>
+    <script src="js/feature-functions.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
